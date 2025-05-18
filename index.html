@@ -34,7 +34,23 @@
 </head>
 <body>
     
-<div class="filter-box">
+
+<button id="filterToggle" onclick="toggleFilter()" style="
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1100;
+    background: white;
+    border: 1px solid #ccc;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+">🔍 Filter</button>
+
+<div class="filter-box" id="filterBox" style="display:none;">
+
     <label for="searchInput">🔍 Suche (Name):</label><br>
     <input type="text" id="searchInput" oninput="updateMarkers()" placeholder="z. B. Stelvio"><br>
 
@@ -152,5 +168,13 @@ let markerGroup = L.markerClusterGroup();
         updateMarkers();
 markerGroup.addTo(map);
     </script>
+
+<script>
+function toggleFilter() {
+    const box = document.getElementById('filterBox');
+    box.style.display = box.style.display === 'none' ? 'block' : 'none';
+}
+</script>
 </body>
+
 </html>
