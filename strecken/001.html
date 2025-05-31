@@ -3,25 +3,34 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Strecke – Zillertaler Höhenstraße</title>
+  <title>1. Zillertaler Höhenstraße</title>
   <style>
     body { font-family: sans-serif; margin: 2rem; background: #f8f8f8; color: #222; }
     .container { max-width: 800px; margin: auto; background: white; padding: 2rem; border-radius: 16px; box-shadow: 0 0 12px rgba(0,0,0,0.1); }
     h1 { font-size: 2rem; margin-bottom: 0.25rem; }
     .badge {
       display: inline-block;
-      background: gold;
-      color: black;
-      font-weight: bold;
       padding: 0.3em 0.8em;
       border-radius: 8px;
       margin-bottom: 1rem;
       font-size: 0.9rem;
+      font-weight: bold;
     }
+    .badge.Geheimtipp { background: #0074D9; color: white; }
+    .badge.Favorit { background: #FF851B; color: white; }
+    .badge.Legendär { background: #2ECC40; color: white; }
+
     .meta { font-size: 0.95rem; margin-bottom: 1rem; }
+    .score span { font-weight: bold; }
     .score { margin: 1rem 0; font-size: 1.1rem; }
     .section { margin-top: 2rem; }
     .section h2 { font-size: 1.3rem; margin-bottom: 0.5rem; }
+    .tipp-box {
+      background: #f4f7fa;
+      border-left: 5px solid #0074D9;
+      padding: 1rem;
+      margin-top: 0.5rem;
+    }
     .table { margin-top: 1rem; }
     .table table { border-collapse: collapse; width: 100%; }
     .table th, .table td {
@@ -31,16 +40,28 @@
     }
     .maps-link { margin-top: 1rem; display: inline-block; background: #0070f3; color: white; padding: 0.6rem 1.2rem; border-radius: 8px; text-decoration: none; }
     .maps-link:hover { background: #005ec4; }
+    .nav-top { margin-bottom: 2rem; }
+    .nav-top a { margin-right: 1rem; text-decoration: none; color: #0070f3; font-weight: bold; }
+    .prev-next { display: flex; justify-content: space-between; margin-top: 3rem; font-size: 0.95rem; }
+    .prev-next a { text-decoration: none; color: #0070f3; }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>Zillertaler Höhenstraße</h1>
-    <div class="badge">Geheimtipp</div>
+    <div class="nav-top">
+      <a href="../index.html">🏠 Home</a>
+      <a href="../karte.html">🗺️ Interaktive Karte</a>
+      <a href="../strecken/">📚 Inhaltsverzeichnis</a>
+    </div>
+
+    <h1>1. Zillertaler Höhenstraße</h1>
+    <div class="badge Geheimtipp">Geheimtipp</div>
+    <div class="score">
+      <span>Fahrspaß:</span> 6 &nbsp;|&nbsp; <span>Panorama:</span> 8 &nbsp;|&nbsp; <span>Höhe:</span> 2.020 m
+    </div>
     <div class="meta">
-      Fahrspaß: 6/10 &nbsp;|&nbsp; Panorama: 8/10 &nbsp;|&nbsp; Höhe: 2.020 m<br />
-      Land: AT &nbsp;|&nbsp; Region: Ostalpen<br />
-      Koordinaten: 47.2812, 11.8395
+      <span>Land:</span> AT &nbsp;|&nbsp; <span>Region:</span> Ostalpen<br />
+      <span>Koordinaten:</span> 47.2812, 11.8395
     </div>
 
     <div class="section">
@@ -52,10 +73,10 @@
 
     <div class="section">
       <h2>Reisetipp</h2>
-      <p>
+      <div class="tipp-box">
         Nordauffahrt (z. B. ab Ried oder Kaltenbach): Lang, landschaftlich eindrucksvoll, rhythmisch zu fahren.<br />
         Südliche Zufahrt (ab Hippach): Kürzer und deutlich steiler, mit engen Kurven und schmaleren Abschnitten. Für maximale Kontrolle empfiehlt sich, die steilere Rampe bergauf zu fahren.
-      </p>
+      </div>
     </div>
 
     <div class="section table">
@@ -69,6 +90,11 @@
     </div>
 
     <a class="maps-link" href="https://www.google.com/maps?q=47.2812,11.8395" target="_blank">Google Maps öffnen</a>
+
+    <div class="prev-next">
+      <a href="000.html">← 0. vorherige Strecke</a>
+      <a href="002.html">2. Gerlospass →</a>
+    </div>
   </div>
 </body>
 </html>
